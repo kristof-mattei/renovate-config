@@ -4,21 +4,15 @@
   "packageRules": [
     {
       "commitMessageTopic": "Rust",
-      "matchManagers": [
-        "regex"
-      ],
-      "matchPackageNames": [
-        "rust"
-      ]
+      "matchManagers": ["regex"],
+      "matchPackageNames": ["rust"]
     }
   ],
   "regexManagers": [
     {
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "rust",
-      "fileMatch": [
-        "^rust-toolchain\\.toml?$"
-      ],
+      "fileMatch": ["^rust-toolchain\\.toml?$"],
       "matchStrings": [
         "channel\\s*=\\s*\"(?<currentValue>\\d+\\.\\d+(\\.\\d+)?)\""
       ],

@@ -4,8 +4,6 @@
 
 ```json
 {
-  "extends": [
-    "github>kristof-mattei/renovate-config"
-  ]
+  "extends": ["github>kristof-mattei/renovate-config"]
 }
 ```

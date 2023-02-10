@@ -23,26 +23,18 @@
     {
       "automerge": true,
       "description": "Automatically merges minor and patch-level updates",
-      "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "digest"
-      ]
+      "matchUpdateTypes": ["minor", "patch", "digest"]
     },
     {
       "description": "v prefix workaround for action updates",
       "extractVersion": "^(?<version>v\\d+\\.\\d+\\.\\d+)$",
-      "matchDepTypes": [
-        "action"
-      ],
+      "matchDepTypes": ["action"],
       "versioning": "regex:^v(?<major>\\d+)(\\.(?<minor>\\d+)\\.(?<patch>\\d+))?$"
     },
     {
       "automerge": false,
       "description": "Automatically creates a PR whenever there is a new major Renovate version",
-      "matchUpdateTypes": [
-        "major"
-      ]
+      "matchUpdateTypes": ["major"]
     }
   ],
   "rangeStrategy": "bump"
