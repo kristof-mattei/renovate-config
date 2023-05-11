@@ -1,3 +1,6 @@
 {
-  "extends": ["default"]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "local>kristof-mattei/renovate-config"
+  ]
 }
