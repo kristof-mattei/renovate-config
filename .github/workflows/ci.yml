@@ -29,4 +29,4 @@ jobs:
         uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
 
       - name: Testing ${{ matrix.file }}
-        run: npx -p renovate renovate-config-validator
+        run: npx --package renovate renovate-config-validator
