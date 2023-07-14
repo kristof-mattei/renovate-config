@@ -23,7 +23,7 @@
     {
       "automerge": true,
       "description": "Automatically merges minor and patch-level updates",
-      "matchUpdateTypes": ["minor", "patch", "digest"]
+      "matchUpdateTypes": ["minor", "patch", "digest", "pin", "pinDigest"]
     },
     {
       "description": "v prefix workaround for action updates",
