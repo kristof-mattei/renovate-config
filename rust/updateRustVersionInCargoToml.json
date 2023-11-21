@@ -4,8 +4,8 @@
   "packageRules": [
     {
       "commitMessageTopic": "Rust",
-      "matchManagers": ["regex"],
-      "matchPackageNames": ["rust"]
+      "matchDepNames": ["rust"],
+      "matchManagers": ["regex"]
     }
   ],
   "regexManagers": [
