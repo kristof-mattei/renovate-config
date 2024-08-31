@@ -4,13 +4,15 @@
   "packageRules": [
     {
       "commitMessageTopic": "Rust",
+      "groupSlug": "rust",
+      "groupName": "Rust",
       "matchDepNames": ["rust"],
       "matchManagers": ["regex"]
     }
   ],
-  "regexManagers": [
+  "customManagers": [
     {
-      "datasourceTemplate": "github-releases",
+      "datasourceTemplate": "github-tags",
       "depNameTemplate": "rust",
       "fileMatch": ["^rust-toolchain\\.toml?$"],
       "matchStrings": [
