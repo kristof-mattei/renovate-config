@@ -1,5 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "commitMessageTopic": "{{depName}} ({{depType}})",
   "dependencyDashboard": true,
   "dependencyDashboardAutoclose": true,
   "extends": [
@@ -40,4 +41,4 @@
   "platformAutomerge": true,
   "rangeStrategy": "bump",
   "rollbackPrs": true
-  }
+}
