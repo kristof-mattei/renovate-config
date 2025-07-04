@@ -7,11 +7,12 @@
       "groupSlug": "rust",
       "groupName": "Rust",
       "matchDepNames": ["rust"],
-      "matchManagers": ["regex"]
+      "matchManagers": ["custom.regex"]
     }
   ],
   "customManagers": [
     {
+      "customType": "regex",
       "datasourceTemplate": "github-tags",
       "depNameTemplate": "rust",
       "fileMatch": ["^rust-toolchain\\.toml?$"],
