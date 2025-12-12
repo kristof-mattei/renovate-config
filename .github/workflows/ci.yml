@@ -19,7 +19,7 @@ jobs:
         file:
           - rust/updateChannelInRustToolchainToml.json
           - rust/updateRustVersionInCargoToml.json
-          - default.json
+          - default.json5
 
     env:
       RENOVATE_CONFIG_FILE: ${{ matrix.file }}
