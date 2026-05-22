@@ -30,6 +30,12 @@
       "automerge": false,
       "description": "Automatically creates a PR whenever there is a new major Renovate version",
       "matchUpdateTypes": ["major"]
+    },
+    {
+      "description": "Group GitHub Actions from the same org together",
+      "matchManagers": ["github-actions"],
+      "matchPackageNames": ["docker/**"],
+      "groupName": "docker org GitHub Actions"
     }
   ],
   "platformAutomerge": true,
