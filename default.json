@@ -35,7 +35,7 @@
       "description": "Group GitHub Actions from the same org together",
       "matchManagers": ["github-actions"],
       "matchPackageNames": ["docker/**"],
-      "groupName": "docker/*"
+      "groupName": "`docker/*` actions"
     }
   ],
   "platformAutomerge": true,
