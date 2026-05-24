@@ -36,6 +36,11 @@
       "matchManagers": ["github-actions"],
       "matchPackageNames": ["docker/**"],
       "groupName": "docker/* actions"
+    },
+    {
+      "description": "Hold off npm package updates for 24 hours after release, matching pnpm's minimumReleaseAge",
+      "matchManagers": ["npm"],
+      "minimumReleaseAge": "24 hours"
     }
   ],
   "platformAutomerge": true,
