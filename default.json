@@ -41,6 +41,10 @@
       "description": "Hold off npm package updates for 24 hours after release, matching pnpm's minimumReleaseAge",
       "matchManagers": ["npm"],
       "minimumReleaseAge": "24 hours"
+    },
+    {
+      "matchManagers": ["cargo"],
+      "rangeStrategy": "pin"
     }
   ],
   "platformAutomerge": true,
