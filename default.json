@@ -12,7 +12,7 @@
     "docker:enableMajor",
     "docker:pinDigests",
     ":prConcurrentLimitNone",
-    ":pinDevDependencies",
+    ":pinAllExceptPeerDependencies",
     ":prHourlyLimitNone",
     "helpers:pinGitHubActionDigestsToSemver"
   ],
