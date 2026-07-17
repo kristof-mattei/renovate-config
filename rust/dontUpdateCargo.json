@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Config for rust crates: Pin minimum versions in Cargo.toml and don't force consumers to update. Regular crates are only refreshed within their existing range, while dev-dependencies (not part of the public API) are kept current",
+  "cargo": {
+    "commitMessageTopic": "Rust crate {{depName}}"
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["cargo"],
+      "rangeStrategy": "in-range-only"
+    },
+    {
+      "matchManagers": ["cargo"],
+      "matchDepTypes": ["dev-dependencies"],
+      "rangeStrategy": "update-lockfile"
+    }
+  ]
+}
