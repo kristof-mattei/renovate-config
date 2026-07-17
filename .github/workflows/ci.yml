@@ -14,24 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
-    strategy:
-      matrix:
-        file:
-          - rust/updateChannelInRustToolchainToml.json
-          - rust/updateRustVersionInCargoToml.json
-          - default.json
-
-    env:
-      RENOVATE_CONFIG_FILE: ${{ matrix.file }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           show-progress: false
 
-      - name: Testing ${{ matrix.file }}
-        run: npx --package renovate renovate-config-validator
+      - name: Validate all presets
+        run: |
+          grep --recursive --files-with-matches --null --include='*.json' --exclude-dir=node_modules 'renovate-schema.json' . \
+            | xargs --null npx --package renovate renovate-config-validator
 
   all-done:
     name: All done
