@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Updates version and sha256 checksum of GitHub release assets pinned with `ADD --checksum` in Dockerfiles",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "datasourceTemplate": "github-release-attachments",
+      "managerFilePatterns": [
+        "/(^|/|\\.)([Dd]ocker|[Cc]ontainer)file$/",
+        "/(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$/"
+      ],
+      "matchStrings": [
+        "ADD --checksum=sha256:(?<currentDigest>[a-f0-9]{64}) https://github\\.com/(?<packageName>[^/]+/[^/]+)/releases/download/(?<currentValue>v[0-9.]+)/"
+      ]
+    }
+  ]
+}
