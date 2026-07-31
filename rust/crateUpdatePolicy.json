@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Config for rust crates: in-range updates only touch the lockfile, keeping Cargo.toml minimums stable. Out-of-range releases (majors, or any release for exact-pinned deps) get a Cargo.toml bump PR which is never automerged",
+  "cargo": {
+    "commitMessageTopic": "Rust crate {{depName}}"
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["cargo"],
+      "rangeStrategy": "update-lockfile"
+    },
+    {
+      "description": "Cargo treats 0.x range jumps as major, but Renovate labels them updateType minor, which would automerge. Renovate does set isBreaking on them, so 0.x needs this additional filter to prevent automerging",
+      "matchManagers": ["cargo"],
+      "matchJsonata": ["isBreaking = true"],
+      "automerge": false
+    }
+  ]
+}
