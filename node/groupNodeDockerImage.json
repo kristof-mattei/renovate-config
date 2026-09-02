@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Groups version updates of the `node` Docker image into the Node.js group (digest-only updates stay separate)",
+  "packageRules": [
+    {
+      "commitMessageTopic": "Node.js",
+      "groupSlug": "node",
+      "groupName": "Node.js",
+      "matchDatasources": ["docker"],
+      "matchDepNames": ["node"],
+      "matchUpdateTypes": ["major", "minor", "patch"]
+    }
+  ]
+}
