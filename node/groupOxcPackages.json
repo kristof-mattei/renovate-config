@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Groups updates of packages from the `oxc-project` GitHub organization (`oxlint`, `oxfmt`, `oxlint-tsgolint`, ...) into one PR",
+  "packageRules": [
+    {
+      "groupName": "oxc",
+      "matchSourceUrls": ["https://github.com/oxc-project/**"],
+      "matchUpdateTypes": ["major", "minor", "patch"]
+    }
+  ]
+}
