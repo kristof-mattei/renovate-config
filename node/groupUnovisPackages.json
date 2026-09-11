@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Groups updates of the `@unovis/*` packages (`@unovis/ts`, `@unovis/react`, ...) into one PR",
+  "description": "Groups updates of the `@unovis/*` packages into one PR, as `@unovis/react` pins `@unovis/ts` as an exact-version peer dependency",
   "packageRules": [
     {
       "groupName": "unovis",
