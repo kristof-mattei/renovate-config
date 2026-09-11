@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Groups updates of the `@unovis/*` packages (`@unovis/ts`, `@unovis/react`, ...) into one PR",
+  "packageRules": [
+    {
+      "groupName": "unovis",
+      "matchPackageNames": ["@unovis/**"],
+      "matchUpdateTypes": ["major", "minor", "patch"]
+    }
+  ]
+}
