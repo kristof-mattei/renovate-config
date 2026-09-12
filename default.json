@@ -1,53 +1,53 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "commitMessageTopic": "{{depName}} ({{datasource}})",
-  "dependencyDashboard": true,
-  "dependencyDashboardAutoclose": true,
-  "extends": [
-    "config:recommended",
-    ":maintainLockFilesWeekly",
-    ":rebaseStalePrs",
-    ":semanticCommits",
-    ":semanticCommitScope(deps)",
-    "docker:enableMajor",
-    "docker:pinDigests",
-    ":prConcurrentLimitNone",
-    ":pinAllExceptPeerDependencies",
-    ":prHourlyLimitNone",
-    "helpers:pinGitHubActionDigestsToSemver"
-  ],
-  "internalChecksFilter": "strict",
-  "lockFileMaintenance": {
-    "automerge": true
-  },
-  "packageRules": [
-    {
-      "automerge": true,
-      "description": "Automatically merges minor and patch-level updates",
-      "matchUpdateTypes": ["minor", "patch", "digest", "pin", "pinDigest"]
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "commitMessageTopic": "{{depName}} ({{datasource}})",
+    "dependencyDashboard": true,
+    "dependencyDashboardAutoclose": true,
+    "extends": [
+        "config:recommended",
+        ":maintainLockFilesWeekly",
+        ":rebaseStalePrs",
+        ":semanticCommits",
+        ":semanticCommitScope(deps)",
+        "docker:enableMajor",
+        "docker:pinDigests",
+        ":prConcurrentLimitNone",
+        ":pinAllExceptPeerDependencies",
+        ":prHourlyLimitNone",
+        "helpers:pinGitHubActionDigestsToSemver"
+    ],
+    "internalChecksFilter": "strict",
+    "lockFileMaintenance": {
+        "automerge": true
     },
-    {
-      "automerge": false,
-      "description": "Automatically creates a PR whenever there is a new major Renovate version",
-      "matchUpdateTypes": ["major"]
-    },
-    {
-      "description": "Group GitHub Actions from the same org together",
-      "matchManagers": ["github-actions"],
-      "matchPackageNames": ["docker/**"],
-      "groupName": "docker/* actions"
-    },
-    {
-      "description": "Hold off npm package updates for 24 hours after release, matching pnpm's minimumReleaseAge",
-      "matchManagers": ["npm"],
-      "minimumReleaseAge": "24 hours"
-    },
-    {
-      "matchManagers": ["cargo"],
-      "rangeStrategy": "pin"
-    }
-  ],
-  "platformAutomerge": true,
-  "rangeStrategy": "bump",
-  "rollbackPrs": true
+    "packageRules": [
+        {
+            "automerge": true,
+            "description": "Automatically merges minor and patch-level updates",
+            "matchUpdateTypes": ["minor", "patch", "digest", "pin", "pinDigest"]
+        },
+        {
+            "automerge": false,
+            "description": "Automatically creates a PR whenever there is a new major Renovate version",
+            "matchUpdateTypes": ["major"]
+        },
+        {
+            "description": "Group GitHub Actions from the same org together",
+            "matchManagers": ["github-actions"],
+            "matchPackageNames": ["docker/**"],
+            "groupName": "docker/* actions"
+        },
+        {
+            "description": "Hold off npm package updates for 24 hours after release, matching pnpm's minimumReleaseAge",
+            "matchManagers": ["npm"],
+            "minimumReleaseAge": "24 hours"
+        },
+        {
+            "matchManagers": ["cargo"],
+            "rangeStrategy": "pin"
+        }
+    ],
+    "platformAutomerge": true,
+    "rangeStrategy": "bump",
+    "rollbackPrs": true
 }

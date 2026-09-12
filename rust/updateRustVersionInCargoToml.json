@@ -1,25 +1,25 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Upgrades the `rust-version` field in the `Cargo.toml` file",
-  "packageRules": [
-    {
-      "commitMessageTopic": "Rust",
-      "groupSlug": "rust",
-      "groupName": "Rust",
-      "matchDepNames": ["rust"],
-      "matchManagers": ["custom.regex"]
-    }
-  ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "datasourceTemplate": "rust-version",
-      "depNameTemplate": "rust",
-      "depTypeTemplate": "rust-version",
-      "managerFilePatterns": ["/^Cargo\\.toml?$/"],
-      "matchStrings": [
-        "rust-version\\s*=\\s*\"(?<currentValue>\\d+\\.\\d+(\\.\\d+)?)\""
-      ]
-    }
-  ]
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": "Upgrades the `rust-version` field in the `Cargo.toml` file",
+    "packageRules": [
+        {
+            "commitMessageTopic": "Rust",
+            "groupSlug": "rust",
+            "groupName": "Rust",
+            "matchDepNames": ["rust"],
+            "matchManagers": ["custom.regex"]
+        }
+    ],
+    "customManagers": [
+        {
+            "customType": "regex",
+            "datasourceTemplate": "rust-version",
+            "depNameTemplate": "rust",
+            "depTypeTemplate": "rust-version",
+            "managerFilePatterns": ["/^Cargo\\.toml?$/"],
+            "matchStrings": [
+                "rust-version\\s*=\\s*\"(?<currentValue>\\d+\\.\\d+(\\.\\d+)?)\""
+            ]
+        }
+    ]
 }
