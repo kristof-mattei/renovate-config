@@ -1,14 +1,14 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Groups version updates of the `rust` Docker image into the Rust group (digest-only updates stay separate)",
-  "packageRules": [
-    {
-      "commitMessageTopic": "Rust",
-      "groupSlug": "rust",
-      "groupName": "Rust",
-      "matchDatasources": ["docker"],
-      "matchDepNames": ["rust"],
-      "matchUpdateTypes": ["major", "minor", "patch"]
-    }
-  ]
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": "Groups version updates of the `rust` Docker image into the Rust group (digest-only updates stay separate)",
+    "packageRules": [
+        {
+            "commitMessageTopic": "Rust",
+            "groupSlug": "rust",
+            "groupName": "Rust",
+            "matchDatasources": ["docker"],
+            "matchDepNames": ["rust"],
+            "matchUpdateTypes": ["major", "minor", "patch"]
+        }
+    ]
 }

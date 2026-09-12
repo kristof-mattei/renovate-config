@@ -1,13 +1,13 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Groups the built-in rust-toolchain manager's updates of the `channel` field in the `rust-toolchain.toml` file into the Rust group",
-  "packageRules": [
-    {
-      "commitMessageTopic": "Rust",
-      "groupSlug": "rust",
-      "groupName": "Rust",
-      "matchDepNames": ["rust"],
-      "matchManagers": ["rust-toolchain"]
-    }
-  ]
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": "Groups the built-in rust-toolchain manager's updates of the `channel` field in the `rust-toolchain.toml` file into the Rust group",
+    "packageRules": [
+        {
+            "commitMessageTopic": "Rust",
+            "groupSlug": "rust",
+            "groupName": "Rust",
+            "matchDepNames": ["rust"],
+            "matchManagers": ["rust-toolchain"]
+        }
+    ]
 }
