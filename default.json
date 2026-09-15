@@ -16,6 +16,9 @@
         ":prHourlyLimitNone",
         "helpers:pinGitHubActionDigestsToSemver"
     ],
+    "git-submodules": {
+        "enabled": true
+    },
     "internalChecksFilter": "strict",
     "lockFileMaintenance": {
         "automerge": true
