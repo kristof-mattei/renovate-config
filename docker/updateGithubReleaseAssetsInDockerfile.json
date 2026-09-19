@@ -10,8 +10,9 @@
                 "/(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$/"
             ],
             "matchStrings": [
-                "ADD --checksum=sha256:(?<currentDigest>[a-f0-9]{64}) https://github\\.com/(?<packageName>[^/]+/[^/]+)/releases/download/(?<currentValue>v[0-9.]+)/"
-            ]
+                "ADD --checksum=sha256:(?<currentDigest>[a-f0-9]{64}) https://github\\.com/(?<packageName>[^/]+/[^/]+)/releases/download/(?<currentValue>v[0-9.]+)/\\S+"
+            ],
+            "autoReplaceStringTemplate": "{{{replace currentDigest newDigest (replace (replace '^v' '_' currentValue) (replace '^v' '_' newValue) (replace (replace '^v' '-' currentValue) (replace '^v' '-' newValue) (replace currentValue newValue replaceString)))}}}"
         }
     ]
 }
