@@ -52,5 +52,8 @@
     "platformAutomerge": true,
     "prConcurrentLimit": 1,
     "rangeStrategy": "bump",
-    "rollbackPrs": true
+    "rollbackPrs": true,
+    "schedule": ["* 0-7,17-23 * * *"],
+    "timezone": "America/Phoenix",
+    "updateNotScheduled": false
 }
