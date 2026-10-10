@@ -53,7 +53,7 @@
     "prConcurrentLimit": 1,
     "rangeStrategy": "bump",
     "rollbackPrs": true,
-    "schedule": ["* 0-7,17-23 * * *"],
+    "schedule": ["* 0-7,17-23 * * 1-5", "* * * * 0,6"],
     "timezone": "America/Phoenix",
     "updateNotScheduled": false
 }
